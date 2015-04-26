@@ -1,0 +1,217 @@
+[cmd]automaticle loads or unloads modues and dependant modules::modprobe
+[cmd]displays information on USB buses and devices::lsusb
+[dir]this root directory contains virtual system information (include slash) ::/proc
+[cmd]lists modules currently loaded in the linux kernel::lsmod
+[cmd]older method used to insert modules into linux kernel::insmod
+[cmd]older method used to remove modules from linux kernel::rmmod
+[cmd]extracts information on boot process and kernel ring buffer::dmesg
+this part of the OS is responsible running the OS, threads, devices, filesystems and video::kernel
+[boot] this firmware prepairs the system for boot::bios
+[shutdown][arg] send warning of impending shutdown, but do not shutdown::-k
+[shutdown][arg] reboot after shutdown::-r
+[shutdown][arg] halt or power off the system::-h
+[shutdown][arg] action to turn off power when shutdown::-P
+[shutdown][arg] skip fsck on next boot::-f
+[shutdown][arg] cancel a waiting shutdown::-F
+[shutdown][arg] cancel a waiting shutdown::-c
+[shutdown][arg] tell init to wait XX seconds before shutting down::-t
+[runlevel][num] used to shutdown system (number only)::0
+[runlevel][num] single-user mode; for low-level maintainence::1
+[runlevel][num] on debian: multi-user mode, undefined on others::2
+[runlevel][num] on red hat derivitives this is full multi-user mode::3
+[runlevel][num] on red hat it's x system graphical login::5
+[runlevel][num] shutdown and reboot the system::6
+[runlevel][cmd] command used to change runlevel::init
+[runlevel][file] this file says default run levels /etc/???? (file only no slash)::inittab
+[dir] directory that contains files variable that change frequently (include slash)::/var
+[dir] user's directory (include slash)::/home
+[boot][dir/file] location of GRUB legacy config::/boot/grub/menu.lst
+[boot][dir/file] location of GRUB 2 config::/boot/grub/grub.cfg
+[cmd] ?____? (program name) will print shared library dependancies::ldd
+[env var] this environment variable determines additional library locations to be searched for shared libraries::LD_LIBRARY_PATH
+[cmd] this program clears the library cache and adds locations to /etc/ld.so.conf file::ldconfig
+[dir/file] this file stores the shared library paths for caching with ldconfig::/etc/ld.so.conf
+[dir/file] stores the repository locations for apt::/etc/apt/sources.list
+[prog][cmd] package handling installer for ubuntu and debian based distros::apt-get
+[prog][cmd] original package handling for debian program::dpkg
+[dpkg][arg] install and configure package::-i
+[dpkg][arg] remove package from system::-r
+[dpkg][arg] list contents of a package::-c
+[dpkg][arg] list status of a package (installed or not)::-s
+[dpkg] reconfigure an allready installed package dpkg-?______?::reconfigure
+[partition] this code is for linux swap (number only)::82
+[partition] this code is for linux file system (number only)::83
+[prog][cmd] name of high level package management interface for debian::aptitude
+[rpm][arg] install package without dependancies::-nodeps
+[rpm][arg] install the package (short answer)::-i
+[rpm][arg] check package signature (same as -checksig)::-K
+[rpm][arg] verify package::-V
+[rpm][arg] all packages::-a
+[rpm][arg] verify all packages::-Va
+[rpm][arg] upgrade or install a new package::-U
+[rpm][arg] upgrade if allready installed::-F
+[rpm][arg] query a package to see if installed::-q
+[rpm][arg] erase or uninstall a package::-e
+[rpm][arg] query package owning file::-f
+[rpm][arg] package::-p
+[rpm][arg] list files in a package::-l
+[rpm][arg] rebuils a source package::-rebuild
+[rpm][arg] rebuilds the rpm database::-rebuilddb
+[rpm][arg] print all installed packages::-qa
+[rpm][arg] list files in an installed package::-ql
+[rpm][arg] determine which installed package a file belongs to::-qf
+[rpm][arg] list all files in an RPM package::-qpl
+[rpm][arg] check signature of a package (same as -K)::-checksig
+[dir/file] directory containing yum sources repos::/etc/yum.repos.d
+[cpio] create copy archive, create leading directories when needed::-d
+[cpio] create copy archive, extract::-i
+[cpio] create copy archive, replace all files without asking::-u
+[cpio] create copy archive, retain previous modification times when creating files::-m
+[prog][cmd] convert RPM packages to CPIO compressed files::rpm2cpio
+[prog][cmd] extract files from an rpm ?______? file.rpm | cpio -dium::rpm2cpio
+[prog][cmd] extract files from an rpm rpm2cpio file.rpm | ?___? -dium::cpio
+[prog][cmd] this utility reads a config file to maintain a groups file, usually used to compile source code and install binaries::make
+[cmd] shows current environment variables::env
+[cmd] print the current working directory::pwd
+[prog][cmd] the most common shell interpreter on linux::bash
+[prog][cmd] this prints system information, such as kernel name and release, cpu type, hardware info::uname
+[uname][arg] prints node name::-n
+[uname][arg] print kernel name::-s
+[uname][arg] print kernel version (includes time of release)::-v
+[uname][arg] print kernel release, version number and type::-r
+[uname][arg] print machine/cpu info::-m
+[uname][arg] print processor info::-p
+[uname][arg] print hardware info::-i
+[uname][arg] print OS name::-o
+[uname][arg] print all info::-a
+[cmd] used to sed an evironment variable::export
+[cmd] used to remove an environment variable::unset
+[man][arg] man #, executable programs or shell commands::1
+[man][arg] man #, system calls functions provided by kernel::2
+[man][arg] man #, library calls, functions called by program libraries::3
+[man][arg] man #, special files, usually found in /dev::4
+[man][arg] man #, file formats and conventions, eg./etc/passwd::5
+[man][arg] man #, games::6
+[man][arg] man #, misc, including macro packages::7
+[man][arg] man #, system admin commands (for root user)::8
+[man][arg] man #, kernel routines [non standard]::9
+[cmd] used to combine files or print a file::cat
+[cmd] prints and reformats streams, such as limit width of lines::fmt
+[fmt][arg] arguement to limit width of column::-w
+[cmd] merge two files without duplicating field [10 blue socks] + [10 red hats] = 10 blue socks red hats::join
+[cmd] merge two files together, so [10 blue socks + 10 red hats] = 10 blue socks 10 red hats::paste
+[rsync][arg] compress files while sending over SSH::-z
+[rsync][arg] archive mode, recursive, keep permissions, preserve; group, permissions, modification times and copy symlinks::-a
+[cmd] convert files for print, adding header and footer::pr
+[cmd] split a file into pieces::split
+[split][arg] split a file into X lines::-l
+[cmd] convert spaces to tabs::unexpand
+[cmd] convert tabs to spaces::expand
+[cmd] output the first part of a file::head
+[cmd] output the last part of a file::tail
+[head][tail][arg] output first/last X lines::-n
+[head][tail][arg] output the first/last X bytes::-c
+[cmd] stream editor for filtering and formatting text::sed
+[sed][arg] substitute instances of word 'old' for 'new' in 'file.txt' (no quote marks)::s/old/new/g file.txt
+[cmd] report or omit repeated lines::uniq
+[uniq][arg] only print duplicate lines::-d
+[uniq][arg] only print unique lines::-u
+[cmd] dump files in octal format::od
+[cmd] arrange file contents by alpa/numeric chars::sort
+[cmd] translate/squeeze/delete characters from stdin to stdout::tr
+[tr][arg] change all instances of ab to zx, from 'file.txt'; tr ?________?::ab zx < file.txt
+[cmd] word count::wc
+[cp][arg] copy and preserve destination file::-backup
+[cp][arg] preserve links::-d
+[mv][arg] do not prompt to overwrite::-f
+[mv][arg] prompt for overwrite::-i
+[mv][arg] do not overwrite existing file, no clobber::-n
+[touch] change access time::-a
+[touch] change modification time::-a
+[touch] use specified timestamp::-t
+[gzip/gunzip][arg] decompress/unzip::-d
+[gzip/gunzip][arg] force::-d
+[gzip/gunzip][arg] help::-h
+[gzip/gunzip][arg] show contents::-l
+[gzip/gunzip][arg] test run::-t
+[mkdir] make all additional directories required::-p
+[tar][arg] find differences between archive and file system::-d
+[tar][arg] delete file from archive::--delete
+[tar][arg] list contents of file::-t
+[tar][arg] append files to end of archive::-r
+[tar][arg] append tar files to an archive::-A
+[tar][arg] extract files from an archive::-x
+[tar][arg] filter through gzip::-z
+[tar][arg] filter through bzip2::-j
+[tar][arg] filter through xz compression::-J
+[cmd] determine file type::file
+[cmd] will save stdin to a file as well as sending it to stdout::tee
+[cmd] execute commands created by standard input or a file::xargs
+[cmd][arg] most common way to display processes for all users, comes from unix::ps aux
+[cmd] print current time system has been active::uptime
+[quota] create a quoter for user sam, that is the same as existing user bill::edquota -p bill sam
+[dpkg][arg] add data from file to the existing package database::-add
+[grub] in grubs config file, root(hd1,4) refers to /dev/?__?::hdb5
+[yum] location of yum repo file::/etc/yum.repos.d
+[cmd] display processes run from current terminal only::ps
+[keyboard] command to pause a program and send to background::ctrl+z
+[cmd] run a command imute to hangup from console::nohup
+[cmd] show free memory and swap::free
+[kill signals] hangup signal; SIGHUP ? HANGUP::1
+[kill signals] interurpt from keyboard #::2
+[kill signals] kill signal::9
+[kill signals] politely ask program to close signal::15
+[cmd] run a program with modified scheduling priority::nice
+[cmd] alter the priority of a running process::renice
+[top] kill process::k
+[top] quit process::q
+[top] change process priority::r
+[top] sort by cpu usage::P
+[top] sort by mem usage::m
+[top][arg] display X updates then quit::-n
+[grep][arg] inverted, show lines NOT matching::-v
+[grep][arg] search all files and for expression::-r
+[grep][arg] ignore case::-i
+[fdisk] interactive mode::-n
+[cmd] used to make a linux file system::mkfs
+[mkfs][arg] specify the type of file system to build::-t
+[mkfs][arg] check device for bad blocks before building filesystem::-c
+[cmd] turn a file system into swap::mkswap
+[cmd] estimate file space usage::du
+[du]  estimate file space usage in bytes::-b
+[du] print the total for a directory only if it is N or fewer levels below command line argument::--max-depth
+[cmd] obtains file system info, xfs_info does the same thing for ifs file system::dumpe2fs
+[cmd] display file system usage, including percentage of partitions used::df
+[cmd] create an EXT2/3/4 filesystem, equivalent of "mkfs -t ext2/3/4"::mke2fs
+[cmd] allows to change file system parameters such as max mount count, time between chacks, add journel, set reserve blocks, obtain file system level; must be on an UNMOUNTED filesystem.::tune2fs
+[cmd] checks and repairs filesystems::fsck
+[fsck][arg] attempt to automatically repair all errors::-a
+[fsck][arg] walk through /etc/fstab file and try to check all file systems::-A
+[fsck][arg] display completion progress::-C
+[fsck][arg] dont execute, just show what would be done::-N
+[cmd] interactively modify a file system, includes features of tune2fs and dump2fs, can be used to undelete a file, use on UNMOUNTED filesystem::debugfs
+[cmd] mount a file system::mount
+[mount] causes file systems mentioned in fstab to be mounted as indicated::-a
+[mount] override mount options in fstab when manually mounting::-o
+[unmount] force an unmount even if file system is busy::-f
+[dir/file] file for configuring file system mounts::/etc/fstab
+[cmd] turn disk quotas on::quotaon
+[cmd] edit a quota::edquota
+[edquota][arg] duplicate the quotas of one user to another::-p
+[cmd] summarize quotas for a file system::repquota
+[repquota][arg] print all quotas of file systems with a quota mount optiun file at its root::-a
+[repquota][arg] print only user quotas::-u
+[repquota][arg] print only group quotas::-g
+[repquota][arg] print a header line before printing each filesystem quota::-v
+[cmd] '-rwsr-xr-x' what is the s ::suid
+[cmd] '-rwxr-sr--' what is the s ::sgid
+[chmod] chmod ?755, what number will set the userid bit?::4
+[chmod] chmod ?755 what number will set the group bit?::2
+[chmod] chmod ?755, what number will set the sticky bit?::1
+[chmod] read bit::4
+[chmod] write bit::2
+[chmod] execute bit::1
+
+
+
+
