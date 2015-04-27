@@ -1,0 +1,17 @@
+[mysql][cmd] this default database contains metadata::information_schema
+[mysql][cmd] create own database called mydb::CREATE DATABASE mydb;
+[mysql][cmd] print databases::SHOW DATABASES;
+[mysql][cmd] create a table called customers inside database mydb with fields; 'id' 11 integers, 'first_name' 20chars, last_name 20chars::CREATE TABLE mydb.customers ('id' int(11) NOT NULL, 'first_name' varchar(20) NOT NULL, 'last_name' varchar(20) NOT NULL);
+[mysql][cmd] go to mydb database::USE mydb;
+[mysql][cmd] print availables tables::SHOW TABLES;
+[mysql][cmd] put data into table 'customers'; id:1 first_name:jeff last_name:jefferson use caps for mysql cmds, ::INSERT INTO customers (id,first_name,last_name) VALUES (1,"jeff","jefferson");
+[mysql][cmd] query all tables from customers, use caps for mysql statements::SELECT * FROM customers; 
+[mysql][cmd] show all entries from table customers, with id = 1 ::SELECT * FROM customers WHERE id = 1;
+[mysql][cmd] add id = 2 first_name = anthony last_name = jefferson into table 'customers', use caps for mysql statements::INSERT INTO customers (id,first_name,last_name) VALUES (2,"anthony","jefferson"); 
+[mysql][cmd] select all members from table customers with last_name jefferson::SELECT * FROM customers WHERE last_name = "jefferson";
+[mysql][cmd] print in human-readable, users from database mysql ::DESCRIBE mysql.user;
+[mysql][cmd] print fields user, host from database.table :: SELECT user, host FROM database.table;
+[mysql][cmd] create user jeff for local host with password test  ::CREATE USER 'jeff'@'localhost' IDENTIFIED BY 'test';
+[mysql][cmd] display  from 'database.table' fields user,host where the user is jeff :: SELECT user,host FROM database.table WHERE user = "jeff";
+[mysql][cmd] give full access to jeff on localhost using mydb  :: GRANT ALL PRIVILEGES ON mydb.* TO 'jeff'@'localhost';
+[mysql] mysql admin program::mysqladmin
