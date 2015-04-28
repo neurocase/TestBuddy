@@ -1,45 +1,45 @@
-[cmd] display all current environment variables::env
-[cmd] to declare variables in the current shell::export
-[env] variable to look for bin files:: PATH
-[env] variable for users mail spool:: MAIL
-[env] variable for default user:: USER
-[env] variable for default terminal:: TERM
-[env] variable for default editor::EDITOR
-[env] variable for what bash promt says (such as user@hostname:~/Documents$)::PS1
-[dir/file] system wide bashrc file::/etc/bash.bashrc
-[dir/file] file used to set/change shell variables for users::/etc/profile
-[dir/file] file is executed when a user logs into a shell::~/.bash_login
-[dir/file] file is executed when a user exits the shell::~/.bash_logout
-[dir/file] file contains bash history::~/.bash_history
-[env][arg] remove variable from environment, same as unset::-u
-[bash][op] execute second command if first is unsuccessfull::||
-[bash][op] execute second command if first is successfull::&&
-[bash][op] execute commands sequencially::;
-[bash][op] execute command and send to background::&
-[bash] You want every user on your system to have an alias to view a log file. What file would you edit to make this change for every user at once?::/etc/bashrc
-[bash] Whenever a user logs out of the system and you want an email sent notifying you they have logged out, to what file would you add this mail statement?::.bash_logout
-[bash] For all new users created, you would like a README file added to the user's home directory by default. Where would you place this README file so that, by default, it is copied into a new user's home directory upon user creation?::/etc/skel
-[bash] Your Bash prompt contains your username, the system's hostname, and current working directory. What does the PS1 variable contain to display this information? [username@hostname /currentdir]::[\u@\h \w]\$ 
-[mysql] mysql admin program::mysqladmin
-[prog][cmd] start mysql as root::mysql -uroot -p
-[mysql][cmd] this default database contains metadata::information_schema
-[mysql][cmd] create own database called mydb::CREATE DATABASE mydb;
-[mysql][cmd] print databases::SHOW DATABASES;
-[mysql][cmd] create a table called customers inside database mydb with fields; 'id' 11 integers, 'first_name' 20chars, last_name 20chars::CREATE TABLE mydb.customers ('id' int(11) NOT NULL, 'first_name' varchar(20) NOT NULL, 'last_name' varchar(20) NOT NULL);
-[mysql][cmd] go to mydb database::USE mydb;
-[mysql][cmd] print availables tables::SHOW TABLES;
-[mysql][cmd] put data into table 'customers'; id:1 first_name:jeff last_name:jefferson use caps for mysql cmds, ::INSERT INTO customers (id,first_name,last_name) VALUES (1,"jeff","jefferson");
-[mysql][cmd] query all tables from customers, use caps for mysql statements::SELECT * FROM customers; 
-[mysql][cmd] show all entries from table customers, with id = 1 ::SELECT * FROM customers WHERE id = 1;
-[mysql][cmd] add id = 2 first_name = anthony last_name = jefferson into table 'customers', use caps for mysql statements::INSERT INTO customers (id,first_name,last_name) VALUES (2,"anthony","jefferson"); 
-[mysql][cmd] select all members from table customers with last_name jefferson::SELECT * FROM customers WHERE last_name = "jefferson";
-[mysql][cmd] print in human-readable, users from database mysql ::DESCRIBE mysql.user;
-[mysql][cmd] print fields user, host from database.table :: SELECT user, host FROM database.table;
-[mysql][cmd] create user jeff for local host with password test  ::CREATE USER 'jeff'@'localhost' IDENTIFIED BY 'test';
-[mysql][cmd] display  from 'database.table' fields user,host where the user is jeff :: SELECT user,host FROM database.table WHERE user = "jeff";
-[mysql][cmd] give full access to jeff on localhost using mydb  :: GRANT ALL PRIVILEGES ON mydb.* TO 'jeff'@'localhost';
-[dir/file] In Red Hat, this is the system wide version of .bashrc::/etc/bashrc
-[dir/file] the system wide version of .bash_profile::/etc/profile
-[RedHat][init.d][runlevels] starts mysql on runlevels 235::chkconfig --level 235 mysqld on
-[Ubuntu][runlevels] start mysql on runlevels 235::update-rc-d mysql start 20 2 3 5
-[dir/file] location of syslog::/var/log/syslog
+[cmd] display all current environment variables:ANSWER:env
+[cmd] to declare variables in the current shell:ANSWER:export
+[env] variable to look for bin files:ANSWER: PATH
+[env] variable for users mail spool:ANSWER: MAIL
+[env] variable for default user:ANSWER: USER
+[env] variable for default terminal:ANSWER: TERM
+[env] variable for default editor:ANSWER:EDITOR
+[env] variable for what bash promt says (such as user@hostname:~/Documents$):ANSWER:PS1
+[dir/file] system wide bashrc file:ANSWER:/etc/bash.bashrc
+[dir/file] file used to set/change shell variables for users:ANSWER:/etc/profile
+[dir/file] file is executed when a user logs into a shell:ANSWER:~/.bash_login
+[dir/file] file is executed when a user exits the shell:ANSWER:~/.bash_logout
+[dir/file] file contains bash history:ANSWER:~/.bash_history
+[env][arg] remove variable from environment, same as unset:ANSWER:-u
+[bash][op] execute second command if first is unsuccessfull:ANSWER:||
+[bash][op] execute second command if first is successfull:ANSWER:&&
+[bash][op] execute commands sequencially:ANSWER:;
+[bash][op] execute command and send to background:ANSWER:&
+[bash] You want every user on your system to have an alias to view a log file. What file would you edit to make this change for every user at once?:ANSWER:/etc/bashrc
+[bash] Whenever a user logs out of the system and you want an email sent notifying you they have logged out, to what file would you add this mail statement?:ANSWER:.bash_logout
+[bash] For all new users created, you would like a README file added to the user's home directory by default. Where would you place this README file so that, by default, it is copied into a new user's home directory upon user creation?:ANSWER:/etc/skel
+[bash] Your Bash prompt contains your username, the system's hostname, and current working directory. What does the PS1 variable contain to display this information? [username@hostname /currentdir]:ANSWER:[\u@\h \w]\$ 
+[mysql] mysql admin program:ANSWER:mysqladmin
+[prog][cmd] start mysql as root:ANSWER:mysql -uroot -p
+[mysql][cmd] this default database contains metadata:ANSWER:information_schema
+[mysql][cmd] create own database called mydb:ANSWER:CREATE DATABASE mydb;
+[mysql][cmd] print databases:ANSWER:SHOW DATABASES;
+[mysql][cmd] create a table called customers inside database mydb with fields; 'id' 11 integers, 'first_name' 20chars, last_name 20chars:ANSWER:CREATE TABLE mydb.customers ('id' int(11) NOT NULL, 'first_name' varchar(20) NOT NULL, 'last_name' varchar(20) NOT NULL);
+[mysql][cmd] go to mydb database:ANSWER:USE mydb;
+[mysql][cmd] print availables tables:ANSWER:SHOW TABLES;
+[mysql][cmd] put data into table 'customers'; id:1 first_name:jeff last_name:jefferson use caps for mysql cmds, :ANSWER:INSERT INTO customers (id,first_name,last_name) VALUES (1,"jeff","jefferson");
+[mysql][cmd] query all tables from customers, use caps for mysql statements:ANSWER:SELECT * FROM customers; 
+[mysql][cmd] show all entries from table customers, with id = 1 :ANSWER:SELECT * FROM customers WHERE id = 1;
+[mysql][cmd] add id = 2 first_name = anthony last_name = jefferson into table 'customers', use caps for mysql statements:ANSWER:INSERT INTO customers (id,first_name,last_name) VALUES (2,"anthony","jefferson"); 
+[mysql][cmd] select all members from table customers with last_name jefferson:ANSWER:SELECT * FROM customers WHERE last_name = "jefferson";
+[mysql][cmd] print in human-readable, users from database mysql :ANSWER:DESCRIBE mysql.user;
+[mysql][cmd] print fields user, host from database.table :ANSWER: SELECT user, host FROM database.table;
+[mysql][cmd] create user jeff for local host with password test  :ANSWER:CREATE USER 'jeff'@'localhost' IDENTIFIED BY 'test';
+[mysql][cmd] display  from 'database.table' fields user,host where the user is jeff :ANSWER: SELECT user,host FROM database.table WHERE user = "jeff";
+[mysql][cmd] give full access to jeff on localhost using mydb  :ANSWER: GRANT ALL PRIVILEGES ON mydb.* TO 'jeff'@'localhost';
+[dir/file] In Red Hat, this is the system wide version of .bashrc:ANSWER:/etc/bashrc
+[dir/file] the system wide version of .bash_profile:ANSWER:/etc/profile
+[RedHat][init.d][runlevels] starts mysql on runlevels 235:ANSWER:chkconfig --level 235 mysqld on
+[Ubuntu][runlevels] start mysql on runlevels 235:ANSWER:update-rc-d mysql start 20 2 3 5
+[dir/file] location of syslog:ANSWER:/var/log/syslog

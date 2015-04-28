@@ -1,7 +1,16 @@
-abc123::a
-bfda123::b
-gfrewfg3r43fg::g
-123ee24t3::1
-g5h4wg543::g
-nyte::n
+"  "abc123:ANSWER:"  "
+'  'da123:ANSWER:'  '
+'"rewfg3r43fg:ANSWER:'"
+123ee24t3:ANSWER:1
+g5h4wg543:ANSWER:g
+nyte:ANSWER:n
 
+INSERT INTO customers (id,first_name,last_name) VALUES (1,"jeff","jefferson");
+INSERT INTO customers (id,first_name,last_name) VALUES(1,'jeff','jefferson); 
+
+SELECT user,host FROM database.table WHERE user="jeff";  
+SELECT user,host FROM database.table WHERE user = "jeff"; 
+
+
+INSERT INTO customers (id,first_name,last_name) VALUES(2,"anthony","jefferson");
+INSERT INTO customers (id,first_name,last_name) VALUES(2,"anthony","jefferson");   

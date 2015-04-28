@@ -1,0 +1,46 @@
+[useradd][user]create user john:ANSWER: useradd john
+[prog][arg][user]remove user john and his home directory:ANSWER:userdel -r john
+[/dir/dir/]default skeleton directory:ANSWER:/etc/skel/
+[useradd][arg]add comment for user, such as first/last name:ANSWER:-c
+[useradd][arg]set home directory directory:ANSWER:-d
+[useradd][arg]expiration date:ANSWER:-e
+[useradd][arg]pre-encrypted password:ANSWER:-p
+[useradd][arg]force dont make home directory:ANSWER:-M
+[useradd][arg]tell it to make a home directory if not default:ANSWER:-m 
+[useradd][arg]set secondary groups a user belongs to:ANSWER:-G
+[useradd][arg]set primary groups a user belongs to:ANSWER:-g
+[useradd][arg]define a number of days a password expires in days that the account is permenently disabled:ANSWER:-f
+[useradd][arg]force disable immediatly after password expires:ANSWER:-f 0
+[useradd][arg]make disable inactive feature:ANSWER:-f -1
+[useradd][arg]create user from skeleton directory:ANSWER:-k
+[adduser]add user bill and force create home directory and use skeleton '/home/skel_basic':ANSWER:adduser  -m -k /home/skel_basic bill
+syslog:x:101:104::/home/syslog:/bin/false, what is the password representation:ANSWER:x
+syslog:x:101:104::/home/syslog:/bin/false, what is the userid:ANSWER:101
+syslog:x:101:104::/home/syslog:/bin/false, what is the groupid:ANSWER:104
+syslog:x:101:104::/home/syslog:/bin/false, what is default shell:ANSWER:/bin/false
+[dir/file]what shell should a user be given in passwd be given to prevent them from using the shell:ANSWER:/sbin/nologin
+[dir/file]where is the encrypted password stored? :ANSWER:/etc/shadow
+[dir/file]location of default settings for adding users, such as whether they have home directory or not :ANSWER:/etc/default/useradd
+[useradd] add user bill305, comment him as "bill hicks", his account should expire on 2020-8-20:ANSWER:useradd -c 'bill hicks' -e 2020-8-20 bill305
+[usermod][arg] set the users home directory to  a new directory:ANSWER:-d
+[usermod][arg] set date on  which user account will expire yyyy-mm-dd:ANSWER:-e
+[usermod][arg] number of days after a password expires until account is  permanently disabled:ANSWER:-f
+[usermod][arg] group id/name of the users new default login group:ANSWER:-g
+[usermod][arg] add user to extra groups; usermod -? group1, group2:ANSWER:-G
+[usermod][arg] change the login name of the user :ANSWER:-l
+[usermod][arg] lock the users account:ANSWER:-L
+[usermod][arg] unlock a users password, removes the '!' in front of password:ANSWER:-U
+[passwd][arg]lock user with passwd (note this is passwd, not usermod):ANSWER:-l
+[passwd][arg] change userid:ANSWER:-u
+[/dir/file] this file contains the groups and all members assosieted to it:ANSWER:/etc/group
+[userdel] remove home directory and mail spool:ANSWER:-r
+[groupmod][arg] specify a new groupname:ANSWER:-n
+[groupmod][arg] use with -g when you want to change to a non-unique group ID (shared group ID) :ANSWER:-o
+[groupmod][arg] specify a new groupid for a group, cannot allready exist:ANSWER:-g
+[groupadd][arg] specify group id :ANSWER:-g
+[groupadd][arg] pick a group id, that is a system group, like for proceses:ANSWER:-r
+[groupadd][arg] force group creation, even if that group allready exists, might be used to recreate a group:ANSWER:-f
+[/dir/file] group file of all groups and numbers:ANSWER:/etc/group
+[groups] user/system accounts are less than what number on most distros:ANSWER:500
+[groups] user/system accounts are less than what number on newer distros:ANSWER:1000
+NOTE: some services have their own group ids because you want that service to be acting on it's own files without anybody else, or any other service interfereing:ANSWER:(note)
